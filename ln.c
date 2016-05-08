@@ -1,19 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
+#include"err.h"
+#include<string.h>
 
 int main(int argc, char const *argv[]){
-	if(argc < 3){
-		printf("\nWrong usage\n");
-		exit(-2);
-	}
+	if(argc < 4) err("arg err", -1);
 
-	if(link(argv[1], argv[2]) == -1){
-		printf("\nError\n");
-		exit(-1);
-	}else{
-		printf("\nn successful\n");
-	}
-
+	if(strcmp(argv[1],"-n") == 0)
+		if(link(argv[2], argv[3]) == -1) err("link err", -2);
+		else printf("\nlink successful\n");
+	else if(strcmp(argv[1],"-s") == 0)
+		if(symlink(argv[2], argv[3]) == -1) err("syslink err", -3);
+		else printf("\nsyslink successful\n"); 
+	else printf("\ninvalid argument\n");
+		
 	return 0;
 }
