@@ -19,6 +19,7 @@ int main(int argc, const char *argv[]){
 		else{
 			printf("\nread by %d\n", getpid());
 			printf("\n%s\n",buff);
+			close(fd);
 		} 
 
 	printf("\nread process done : %d\n", getpid());
