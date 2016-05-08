@@ -37,6 +37,7 @@ int main(int argc, const char *argv[]){
 	}
 
 	printf("\nenter to unlock\n");
+	getchar();
 	fvar.l_type = F_UNLCK;
 
 	if(fcntl(fd, F_SETLK, &fvar) == -1) err("Unlock err", -4);
