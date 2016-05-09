@@ -1,8 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
 #include"err.h"
-#include<string.h>
 
 int main(int argc, char const *argv[]){
 	if(argc < 4) err("arg err", -1);

@@ -18,7 +18,7 @@ void gen(){
         printf("\n%d :ELSE %s\n", l2, stmt[2]);
         printf("\n%d : STOP\n", l3);
     }
-    
+    //or something like 
 }
 
 int main(){

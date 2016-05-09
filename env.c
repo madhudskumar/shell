@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
+#include"err.h"
 
 extern char **environ;
 char **e_ptr;

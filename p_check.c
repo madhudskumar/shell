@@ -20,12 +20,10 @@ void checkPath(char *name,int parm){
 }
 
 void main(){
-	//check system
-	checkSys("clock TCK",_SC_CLK_TCK); //Number of clock ticks
-	checkSys("child process",_SC_CHILD_MAX); //Max number of child processe
-	checkSys("max open",_SC_OPEN_MAX); //max open
-	
-	//check path
-	checkPath("max path",_PC_PATH_MAX); //max path
-	checkPath("max name",_PC_NAME_MAX); //max name
+	checkSys("clock TCK",_SC_CLK_TCK);  
+	checkSys("child process",_SC_CHILD_MAX);  
+	checkSys("max open",_SC_OPEN_MAX);  
+
+	checkPath("max path",_PC_PATH_MAX);  
+	checkPath("max name",_PC_NAME_MAX);  
 }

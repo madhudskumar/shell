@@ -16,7 +16,7 @@ void check(char *name, int parm){
 
 void main(){
 	check("job ctrl",_POSIX_JOB_CONTROL);
-       	check("saved ids",_POSIX_SAVED_IDS);
+	check("saved ids",_POSIX_SAVED_IDS);
 	check("chown rest",_POSIX_CHOWN_RESTRICTED);
 	check("posix vd",_POSIX_VDISABLE);
 } 
