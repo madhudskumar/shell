@@ -88,6 +88,7 @@ void infixToPostfix(char infix[]){
             push(stack, &top, curSym);
             break;
         default:
+            if(isalnum(curSym) == 0) yyerror();
             postfix[++pptr] = curSym;
         }
     }
