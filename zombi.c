@@ -4,11 +4,11 @@ int main(int argc, const char *argv[]){
 	pid_t pid;
 	
 	if((pid = fork()) < 0) err("frk err", -1);
-	else if(pid == 0){
-		printf("\nChild process : %d\n", getpid());
+	else if(pid > 0){
+		printf("\nparent process : %d\n", getpid());  
 		sleep(2);
 	}else{
-		printf("\nparent process : %d\n", getppid());
+		printf("\nChild process : %d\n", getppid());
 		exit(0);
 	}
 	
