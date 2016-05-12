@@ -76,9 +76,7 @@ void infixToPostfix(char infix[]){
             push(stack, &top, curSym);
             break;
         case ')':
-            while((stkSym = pop(stack, &top)) != '('){
-                postfix[++pptr] = stkSym;
-            }
+            while((stkSym = pop(stack, &top)) != '(') postfix[++pptr] = stkSym;
             break;
         case '+':
         case '*':
